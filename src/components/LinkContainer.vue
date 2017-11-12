@@ -26,7 +26,7 @@
     },
     computed: {
       hostname () {
-        return location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '')
+        return location.hostname + (location.port ? ':' + location.port : '')
       }
     },
     methods: {
@@ -54,14 +54,15 @@
     grid-gap: 10px
     padding: 0 50px
     justify-content: center
-    transition: all 1s
     &-input
       padding: 10px 20px
     &-submit
-      font-weight: 600
+      font-weight: 500
       white-space: nowrap
       transition: all 1s
+      cursor: pointer
     &-encoded
+      grid-column: 1 / 3
       color: #fff
     &-link
       font-weight: 800

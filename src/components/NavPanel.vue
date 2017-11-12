@@ -6,9 +6,9 @@
     .NavPanel-link.NavPanel-link--mobile
       i.fa.fa-users
     .NavPanel-link.NavPanel-link--mobile
-      i.fa.fa-users
+      i.fa.fa-btc
     .NavPanel-link.NavPanel-link--mobile
-      i.fa.fa-users
+      i.fa.fa-apple
     .NavPanel-link.NavPanel-link--sing Sign up
 </template>
 
