@@ -8,8 +8,10 @@
     )
     button.LinkContainer-submit(
       @click="getShortenLink"
+      @mouseover="changeButtonTextOver"
+      @mouseout="changeButtonTextOut"
       :disabled="!srcLink"
-    ) Let it bit.ly
+    ) {{ buttonText }}
     .LinkContainer-encoded(v-if="encodedLink") OK, this is your shorten link:
       .LinkContainer-link {{ hostname }}/{{ encodedLink }}
 </template>
@@ -21,7 +23,8 @@
     data () {
       return {
         srcLink: null,
-        encodedLink: null
+        encodedLink: null,
+        buttonText: 'Let it bit.ly'
       }
     },
     computed: {
@@ -30,6 +33,12 @@
       }
     },
     methods: {
+      changeButtonTextOver () {
+        this.buttonText = 'Let it bit.lz'
+      },
+      changeButtonTextOut () {
+        this.buttonText = 'Let it bit.ly'
+      },
       getShortenLink () {
         this.encode(this.srcLink)
       },
